@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -11,58 +12,160 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
   <style>
-    :root{
-      --pf-primary:#0ea5e9; /* sky-500 */
-      --pf-dark:#0b132b;
-      --pf-muted:#6c757d;
-      --pf-accent:#22c55e;
+    :root {
+      /*color de boton de tienda */
+      --pf-primary: #0ec8e9;
+      /* sky-500 */
+      --pf-dark: #0b132b;
+      --pf-muted: #6c757d;
+      --pf-accent: #22c55e;
     }
-    body{font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";}
-    .navbar{box-shadow: 0 6px 24px rgba(0,0,0,.06);}
-    .navbar-brand{font-weight:800; letter-spacing:.2px;}
-    .btn-primary{background:var(--pf-primary); border-color:var(--pf-primary);}    
-    .btn-primary:hover{filter:brightness(.95);}  
-    .btn-outline-light:hover{color:#111}
-    .hero{position:relative;}
-    .hero-overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.25) 60%, rgba(0,0,0,.55));}
-    .hero .carousel-caption{bottom:18%;}
-    .section-title{font-weight:800; letter-spacing:.3px;}
-    .section-sub{color:var(--pf-muted)}
-    .icon-round{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:#e7f6fe; color:var(--pf-primary);}
-    .feature-card{border:1px solid rgba(0,0,0,.06); border-radius:20px; box-shadow:0 10px 24px rgba(0,0,0,.06);}    
-    .gallery img{border-radius:16px; object-fit:cover; width:100%; height:100%;}
-    .testimonial{border:1px solid rgba(0,0,0,.06); border-radius:20px; box-shadow:0 10px 24px rgba(0,0,0,.06);} 
-    .contact-card{border:1px solid rgba(0,0,0,.06); border-radius:20px; box-shadow:0 10px 24px rgba(0,0,0,.06);} 
-    footer{background:#0b132b; color:#cdd3df;}
-    footer a{color:#e5f2ff; text-decoration:none}
-    .whatsapp-fab{
-      position:fixed; right:18px; bottom:18px; z-index:1050; border-radius:999px; padding:.9rem 1rem;
-      background:#25d366; color:#fff; box-shadow:0 10px 24px rgba(0,0,0,.25);
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
     }
-    .badge-soft{background:#eef9f2; color:#1e8e3e; border:1px solid #ccebd8}
+
+    .navbar {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    }
+
+    .navbar-brand {
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+
+    .btn-primary {
+      background: var(--pf-primary);
+      border-color: var(--pf-primary);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(.95);
+    }
+
+    .btn-outline-light:hover {
+      color: #111
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .25) 60%, rgba(0, 0, 0, .55));
+    }
+
+    .hero .carousel-caption {
+      bottom: 18%;
+    }
+
+    .section-title {
+      font-weight: 800;
+      letter-spacing: .3px;
+    }
+
+    .section-sub {
+      color: var(--pf-muted)
+    }
+
+    .icon-round {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #e7f6fe;
+      color: var(--pf-primary);
+    }
+
+    .feature-card {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    .gallery img {
+      border-radius: 16px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .testimonial {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    .contact-card {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    footer {
+      background: #0b132b;
+      color: #cdd3df;
+    }
+
+    footer a {
+      color: #e5f2ff;
+      text-decoration: none
+    }
+
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1050;
+      border-radius: 999px;
+      padding: .9rem 1rem;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    }
+
+    .badge-soft {
+      background: #eef9f2;
+      color: #1e8e3e;
+      border: 1px solid #ccebd8
+    }
   </style>
 </head>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-white sticky-top">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
         <i class="bi bi-shield-heart text-primary"></i>
         <span>Estrella Andina Salud</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+        aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <!--navegacios a partes del cuerpo de pagina-->
           <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nosotros</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Sobre Nosotros</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="identidad.html">Identidad</a>
+              <a class="dropdown-item" href="filosofia.html">Filosofia</a>
+            </div>
+          </li>
           <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
           <!--li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li-->
           <li class="nav-item"><a class="nav-link" href="#testimonios">Reseñas</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
           <li class="nav-item ms-lg-2">
-            <a class="btn btn-primary" href="#comprar"><i class="bi bi-bag me-1"></i> Comprar</a>
+            <!--a class="btn btn-primary" href="#comprar"><i class="bi bi-bag me-1"></i> Comprar</a-->
+            <a class="btn btn-primary" href="tienda.html"><i class="bi bi-bag me-1"></i>Tienda</a>
           </li>
         </ul>
       </div>
@@ -73,18 +176,22 @@
   <header id="inicio" class="hero">
     <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
           <!--img src="https://www.dogster.com/wp-content/uploads/2024/03/West-Highland-White-Terrier-and-Poodle_BIGANDT.COM_shutterstock.jpg" class="d-block w-100" alt="Veterinaria" style="max-height:72vh; object-fit:cover;"-->
-          <img src="https://img.freepik.com/vector-premium/medico-asistente-enfermeria-grupo-ayuda-medica-equipo-hospitalario-trabajadores-amables-atentos_528132-1083.jpg" class="d-block w-100" alt="Veterinaria" style="max-height:72vh; object-fit:cover;">
+          <img
+            src="https://img.freepik.com/vector-premium/medico-asistente-enfermeria-grupo-ayuda-medica-equipo-hospitalario-trabajadores-amables-atentos_528132-1083.jpg"
+            class="d-block w-100" alt="Veterinaria" style="max-height:72vh; object-fit:cover;">
           <div class="hero-overlay"></div>
           <div class="carousel-caption text-start">
             <!--span class="badge badge-soft">Clínica & Grooming</span-->
-            <h1 class="display-5 fw-bold mt-3 text-white">Bienvenido a <span class="text-info">Estrella Andina</span></h1>
+            <h1 class="display-5 fw-bold mt-3 text-white">Bienvenido a <span class="text-info">Estrella Andina</span>
+            </h1>
             <p class="lead">Cuidamos la salud y el bienestar de las personas con atención profesional y cariño.</p>
             <div class="d-flex gap-2">
               <a class="btn btn-primary btn-lg" href="#comprar">Comprar</a>
@@ -93,7 +200,8 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop" class="d-block w-100" alt="Perro feliz" style="max-height:72vh; object-fit:cover;">
+          <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=1600&auto=format&fit=crop"
+            class="d-block w-100" alt="Perro feliz" style="max-height:72vh; object-fit:cover;">
           <div class="hero-overlay"></div>
           <div class="carousel-caption text-start">
             <span class="badge badge-soft">Atención amable</span>
@@ -103,7 +211,8 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop" class="d-block w-100" alt="Chequeo" style="max-height:72vh; object-fit:cover;">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop"
+            class="d-block w-100" alt="Chequeo" style="max-height:72vh; object-fit:cover;">
           <div class="hero-overlay"></div>
           <div class="carousel-caption text-start">
             <span class="badge badge-soft">Confianza de clientes</span>
@@ -130,15 +239,20 @@
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
           <h2 class="section-title">Sobre nuestra clínica</h2>
-          <p class="section-sub">Atención personalizada, diagnósticos precisos y un enfoque humano hacia cada mascota.</p>
-          <p>Nos comprometemos a brindar servicios veterinarios de primer nivel con calidez y transparencia. Nuestro equipo ofrece consultas, vacunación, acicalamiento, cirugías programadas y emergencias 24/7.</p>
+          <p class="section-sub">Atención personalizada, diagnósticos precisos y un enfoque humano hacia cada mascota.
+          </p>
+          <p>Nos comprometemos a brindar servicios veterinarios de primer nivel con calidez y transparencia. Nuestro
+            equipo ofrece consultas, vacunación, acicalamiento, cirugías programadas y emergencias 24/7.</p>
           <div class="d-flex gap-2 mt-3">
             <a class="btn btn-primary" href="#servicios"><i class="bi bi-clipboard2-heart me-1"></i> Ver servicios</a>
-            <a class="btn btn-outline-secondary" href="https://drive.google.com" target="_blank" rel="noopener">Descargar folleto</a>
+            <a class="btn btn-outline-secondary" href="https://drive.google.com" target="_blank"
+              rel="noopener">Descargar folleto</a>
           </div>
         </div>
         <div class="col-lg-6">
-          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:420px;" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop" alt="Sobre nosotros" />
+          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:420px;"
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop"
+            alt="Sobre nosotros" />
         </div>
       </div>
     </div>
@@ -216,7 +330,9 @@
           <a class="btn btn-primary btn-lg" href="#contacto"><i class="bi bi-bag"></i> Comprar ahora</a>
         </div>
         <div class="col-lg-5">
-          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:360px;" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop" alt="Tienda" />
+          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:360px;"
+            src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=1600&auto=format&fit=crop"
+            alt="Tienda" />
         </div>
       </div>
     </div>
@@ -237,13 +353,16 @@
               <div class="col-lg-8">
                 <div class="p-4 p-md-5 testimonial">
                   <div class="d-flex align-items-center gap-3 mb-3">
-                    <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=200&auto=format&fit=crop" class="rounded-circle" width="54" height="54" alt="Axel" />
+                    <img
+                      src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=200&auto=format&fit=crop"
+                      class="rounded-circle" width="54" height="54" alt="Axel" />
                     <div>
                       <h6 class="mb-0">Axel — Coni</h6>
                       <small class="text-muted">Cliente</small>
                     </div>
                   </div>
-                  <p class="mb-0">“Estamos encantados con el trato y la atención recibida. Nos atienden a cualquier hora y eso nos transmite mucha tranquilidad. Instalaciones impecables.”</p>
+                  <p class="mb-0">“Estamos encantados con el trato y la atención recibida. Nos atienden a cualquier hora
+                    y eso nos transmite mucha tranquilidad. Instalaciones impecables.”</p>
                 </div>
               </div>
             </div>
@@ -253,13 +372,16 @@
               <div class="col-lg-8">
                 <div class="p-4 p-md-5 testimonial">
                   <div class="d-flex align-items-center gap-3 mb-3">
-                    <img src="https://images.unsplash.com/photo-1506898667547-42e9368c3cbb?q=80&w=200&auto=format&fit=crop" class="rounded-circle" width="54" height="54" alt="Sandra" />
+                    <img
+                      src="https://images.unsplash.com/photo-1506898667547-42e9368c3cbb?q=80&w=200&auto=format&fit=crop"
+                      class="rounded-circle" width="54" height="54" alt="Sandra" />
                     <div>
                       <h6 class="mb-0">Sandra — Olivia</h6>
                       <small class="text-muted">Cliente</small>
                     </div>
                   </div>
-                  <p class="mb-0">“Experiencia maravillosa. Explican cada proceso con tranquilidad y transparencia. Mi perrita salió contenta y sin miedo.”</p>
+                  <p class="mb-0">“Experiencia maravillosa. Explican cada proceso con tranquilidad y transparencia. Mi
+                    perrita salió contenta y sin miedo.”</p>
                 </div>
               </div>
             </div>
@@ -269,13 +391,15 @@
               <div class="col-lg-8">
                 <div class="p-4 p-md-5 testimonial">
                   <div class="d-flex align-items-center gap-3 mb-3">
-                    <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop" class="rounded-circle" width="54" height="54" alt="Oscar" />
+                    <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop"
+                      class="rounded-circle" width="54" height="54" alt="Oscar" />
                     <div>
                       <h6 class="mb-0">Oscar — Adex y Teo</h6>
                       <small class="text-muted">Cliente</small>
                     </div>
                   </div>
-                  <p class="mb-0">“Desde el primer día supimos que sería nuestra veterinaria de confianza. Trato profesional y mucho cariño para nuestros perros.”</p>
+                  <p class="mb-0">“Desde el primer día supimos que sería nuestra veterinaria de confianza. Trato
+                    profesional y mucho cariño para nuestros perros.”</p>
                 </div>
               </div>
             </div>
@@ -301,7 +425,8 @@
           <div class="p-4 p-md-5 contact-card h-100">
             <h3 class="section-title">Contactanos</h3>
             <p class="section-sub">Dejanos tu consulta y te respondemos a la brevedad.</p>
-            <form onsubmit="event.preventDefault(); alert('¡Gracias! Pronto nos pondremos en contacto.'); this.reset();">
+            <form
+              onsubmit="event.preventDefault(); alert('¡Gracias! Pronto nos pondremos en contacto.'); this.reset();">
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Nombre</label>
@@ -317,7 +442,8 @@
                 </div>
                 <div class="col-12 d-flex gap-2">
                   <button class="btn btn-primary" type="submit"><i class="bi bi-send"></i> Enviar</button>
-                  <a class="btn btn-outline-secondary" href="tel:+543884475139"><i class="bi bi-telephone"></i> +54 388 412 3456</a>
+                  <a class="btn btn-outline-secondary" href="tel:+543884475139"><i class="bi bi-telephone"></i> +54 388
+                    412 3456</a>
                 </div>
               </div>
             </form>
@@ -332,7 +458,9 @@
               <li class="mb-2"><i class="bi bi-envelope"></i> estrellaAndinaSalud@gmail.com</li>
             </ul>
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
-              <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-65.310%2C-24.200%2C-65.285%2C-24.185&layer=mapnik" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-65.310%2C-24.200%2C-65.285%2C-24.185&layer=mapnik"
+                style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
@@ -373,18 +501,22 @@
     // Activar el enlace activo según el scroll
     const sections = document.querySelectorAll('section, header');
     const navLinks = document.querySelectorAll('.navbar .nav-link');
-    const map = {}; navLinks.forEach(a=> map[a.getAttribute('href').replace('#','')] = a);
+    const map = {}; navLinks.forEach(a => map[a.getAttribute('href').replace('#', '')] = a);
     const handler = () => {
       let current = 'inicio';
-      sections.forEach(sec=>{
+      sections.forEach(sec => {
         const top = sec.getBoundingClientRect().top;
-        if(top <= 96) current = sec.id || 'inicio';
+        if (top <= 96) current = sec.id || 'inicio';
       });
-      navLinks.forEach(a=>a.classList.remove('active'));
+      navLinks.forEach(a => a.classList.remove('active'));
       map[current]?.classList.add('active');
     }
-    document.addEventListener('scroll', handler, {passive:true});
+    document.addEventListener('scroll', handler, { passive: true });
   </script>
+  <!--desplegable-->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
+
 </html>
 
