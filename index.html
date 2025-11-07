@@ -13,7 +13,35 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-  <style>
+  <!-- CSS de Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+ 
+ 
+ <style>
+   .map-container {
+      background: white;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+      width: 600px;
+      max-width: 90%;
+    }
+
+    .map-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #map {
+      height: 400px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
     :root {
       /*color de boton de tienda */
       --pf-primary: #0ec8e9;
@@ -262,6 +290,10 @@
     .logo-navbar:hover {
       transform: scale(1.1);
     }
+
+    /*mapa*/
+    
+
   </style>
 
 </head>
@@ -546,16 +578,55 @@
               <li class="mb-2"><i class="bi bi-telephone"></i> +54 388 412 3456</li>
               <li class="mb-2"><i class="bi bi-envelope"></i> estrellaAndinaSalud@gmail.com</li>
             </ul>
+            <h5 class="fw-bold mb-3">Puntos simulados en San Salvador de Jujuy</h5>
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/d/embed?mid=1JZUOxR1-Oh8Hj4d5wnKwIii5ZM6j3hqM&ehbc=2E312F&ll=-23.361644422514626%2C-64.55403877214513&z=7"
-                style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <div class="map-title"></div>
+              <div id="map"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+
+ <!-- JS de Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Coordenadas del centro de San Salvador de Jujuy
+      const latBase = -24.1858;
+      const lngBase = -65.2995;
+
+      // Crear el mapa centrado en Jujuy
+      const map = L.map('map').setView([latBase, lngBase], 13);
+
+      // Cargar los tiles de OpenStreetMap
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      }).addTo(map);
+
+      // Función para generar coordenadas aleatorias cerca del punto base
+      function generarCoordenadasAleatorias(latBase, lngBase, cantidad, rango) {
+        const puntos = [];
+        for (let i = 0; i < cantidad; i++) {
+          const lat = latBase + (Math.random() - 0.5) * rango;
+          const lng = lngBase + (Math.random() - 0.5) * rango;
+          puntos.push([lat, lng]);
+        }
+        return puntos;
+      }
+
+      // Generar 30 puntos simulados alrededor de Jujuy
+      const puntosSimulados = generarCoordenadasAleatorias(latBase, lngBase, 30, 0.05);
+
+      // Añadir los puntos al mapa
+      puntosSimulados.forEach(([lat, lng], i) => {
+        L.marker([lat, lng])
+          .addTo(map)
+          .bindPopup(`📍Enfermero Disponible N°${i + 1}<br>`);
+      });
+    </script>
+
 
   <footer class="py-4">
     <div class="container">
