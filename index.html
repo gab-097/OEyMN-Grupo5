@@ -15,10 +15,10 @@
 
   <!-- CSS de Leaflet -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
- 
- 
- <style>
-   .map-container {
+
+
+  <style>
+    .map-container {
       background: white;
       padding: 10px;
       border-radius: 15px;
@@ -292,8 +292,6 @@
     }
 
     /*mapa*/
-    
-
   </style>
 
 </head>
@@ -324,6 +322,7 @@
           <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonios">Reseñas</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+           <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn btn-primary" href="tienda.html"><i class="bi bi-bag me-1"></i>Tienda</a>
           </li>
@@ -346,10 +345,12 @@
           <div class="hero-overlay"></div>
           <div class="carousel-caption text-start">
             <h1 class="display-5 fw-bold mt-3 text-white">Bienvenido a <span class="text-info">Estrella Andina</span>
+              <span class="display-5 fw-bold mt-3 text-white"> +Salud</span>
             </h1>
-            <p class="lead">Cuidamos la salud y el bienestar de las personas con atención profesional y cariño.</p>
+            <p class="lead">Somos el puente de confianza que conecta a pacientes que requieren atención de enfermería
+              domiciliaria con profesionales previamente verificados para tu tranquilidad..</p>
             <div class="d-flex gap-2">
-              </div>
+            </div>
           </div>
         </div>
         <div class="carousel-item">
@@ -384,24 +385,26 @@
     </div>
   </header>
 
-<section id="app" class="">
-  <header class="hero2">
-    <div class="container2">
-      <h1 class="display-5 fw-bold mt-3 text-white">Descubre <span class="text-decoration">Nuestra App</span>
-      </h1>
-      <p>La aplicación que simplifica tu día a día. Gestiona tus tareas, ahorra tiempo y disfruta de una experiencia
-        única.</p>
-      <div class="buttons">
-        <a href="#" class="btn-googleplay">
-          <img src="images/boton-google.svg" alt="Disponible en Google Play">
-        </a>
+  <section id="app" class="">
+    <header class="hero2">
+      <div class="container2">
+        <h1 class="display-5 fw-bold mt-3 text-white">Descubre <span class="text-decoration">Nuestra App</span>
+        </h1>
+
+        <h1 class="text-decoration">¡Tu Salud a un toque!</h1>
+        <p>La plataforma que te da seguridad, inmediatez y control. Gestiona tu atención de enfermería de forma simple,
+          transparente y rápida desde tu celular.</p>
+        <div class="buttons">
+          <a href="https://www.figma.com/make/4XfWXxZZBLvHKchIMUE0MV/Estrella-Andina--Salud-App?node-id=0-1&p=f&t=AW3QYy5vVxYLwggk-0&fullscreen=1" class="btn-googleplay">
+            <img src="images/boton-google.svg" alt="Disponible en Google Play">
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="image-container">
-      <img src="images/plantilla.png" alt="App en teléfono">
-    </div>
-  </header>
-</section>
+      <div class="image-container">
+        <img src="images/plantilla.png" alt="App en teléfono">
+      </div>
+    </header>
+  </section>
 
 
   <section id="servicios" class="py-5 bg-light">
@@ -409,30 +412,36 @@
       <div class="text-center mb-5">
         <p></p>
         <h2 class="section-title">Nuestros servicios</h2>
-        <p class="section-sub">-por definir-</p>
+
       </div>
       <div class="row g-4">
         <div class="col-md-4">
           <div class="p-4 feature-card h-100">
-            <div class="icon-round mb-3"><i class="bi bi-syringe"></i></div>
-            <h5 class="fw-bold">-por definir-</h5>
-            <p>-texto-</p>
+            <div class="icon-round mb-3">
+              <img src="images/house-heart-fill.svg">
+            </div>
+            <h5 class="fw-bold">Atención de Enfermería a Domicilio</h5>
+            <p>Profesionales verificados llegan a tu casa. Ideal para cuidados periódicos o integrales</p>
             <a class="link-primary" href="#contacto">Consultar</a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="p-4 feature-card h-100">
-            <div class="icon-round mb-3"><i class="bi bi-scissors"></i></div>
-            <h5 class="fw-bold">-por definir-</h5>
-            <p>--texto--</p>
-            <a class="link-primary" href="#comprar">---</a>
+            <div class="icon-round mb-3">
+              <img src="images/cart-plus-fill.svg">
+            </div>
+            <h5 class="fw-bold">Tienda de Salud</h5>
+            <p>Compra insumos médicos, kits y productos de bienestar con envío rápido.</p>
+            <a class="link-primary" href="tienda.html">Explorar</a>
           </div>
         </div>
         <div class="col-md-4">
           <div class="p-4 feature-card h-100">
-            <div class="icon-round mb-3"><i class="bi bi-heart-pulse"></i></div>
-            <h5 class="fw-bold">-por definir-</h5>
-            <p>--texto--</p>
+            <div class="icon-round mb-3">
+              <img src="images/person-workspace.svg">
+            </div>
+            <h5 class="fw-bold">Talleres y Capacitaciones</h5>
+            <p>Enfermeros ofrecen cursos presenciales/virtuales. Nosotros gestionamos inscripción y publicidad</p>
             <a class="link-primary" href="#contacto">Más info</a>
           </div>
         </div>
@@ -445,16 +454,16 @@
       <div class="row align-items-center g-4">
         <div class="col-lg-7">
           <h2 class="section-title">Podés comprar desde la Web</h2>
-          <p class="section-sub">Kit, Material educativo,etc</p>
+          <!--p class="section-sub">Kit, Material educativo,etc</p-->
           <ul class="mb-3">
-            <li>Pedidos para retirar en sucursal</li>
+            <!--li>Pedidos para retirar en sucursal</li-->
             <li>Envíos en la ciudad</li>
             <li>Medios de pago: débito, crédito y efectivo</li>
           </ul>
           <a class="btn btn-primary btn-lg" href="tienda.html"><i class="bi bi-bag"></i> Comprar ahora</a>
         </div>
         <div class="col-lg-5">
-          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:360px;" src="images/market.jpeg"
+          <img class="w-100 rounded-4 shadow" style="object-fit:cover; max-height:360px;" src="images/market2.jpg"
             alt="Tienda" />
         </div>
       </div>
@@ -480,8 +489,8 @@
                       src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=200&auto=format&fit=crop"
                       class="rounded-circle" width="54" height="54" alt="Axel" />
                     <div>
-                      <h6 class="mb-0">Axel — Coni</h6>
-                      <small class="text-muted">Cliente</small>
+                      <h6 class="mb-0">Axel</h6>
+                      <small class="text-muted">Profesional</small>
                     </div>
                   </div>
                   <p class="mb-0">“Es segura nos sirve a amabas partes para crear un vínculo excelente,la recomiendo
@@ -499,11 +508,12 @@
                       src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cGVyZmlsfGVufDB8fDB8fHww&fm=jpg&q=60&w=3000"
                       class="rounded-circle" width="54" height="54" alt="Sandra" />
                     <div>
-                      <h6 class="mb-0">Sandra — Olivia</h6>
+                      <h6 class="mb-0">Carlos</h6>
                       <small class="text-muted">Cliente</small>
                     </div>
                   </div>
-                  <p class="mb-0">“Experiencia maravillosa. Explican cada proceso con tranquilidad y transparencia. Lo recomiendo”</p>
+                  <p class="mb-0">“Experiencia maravillosa. Explican cada proceso con tranquilidad y transparencia. Lo
+                    recomiendo”</p>
                 </div>
               </div>
             </div>
@@ -516,7 +526,7 @@
                     <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=200&auto=format&fit=crop"
                       class="rounded-circle" width="54" height="54" alt="Oscar" />
                     <div>
-                      <h6 class="mb-0">Oscar — Adex y Teo</h6>
+                      <h6 class="mb-0">Oscar</h6>
                       <small class="text-muted">Cliente</small>
                     </div>
                   </div>
@@ -548,7 +558,7 @@
             <p class="section-sub">Dejanos tu consulta y te respondemos a la brevedad.</p>
             <form
               onsubmit="event.preventDefault(); alert('¡Gracias! Pronto nos pondremos en contacto.'); this.reset();">
-              <div class="row g-3">
+              <div class="row g-3">                
                 <div class="col-md-6">
                   <label class="form-label">Nombre</label>
                   <input type="text" class="form-control" required />
@@ -557,6 +567,12 @@
                   <label class="form-label">Email</label>
                   <input type="email" class="form-control" required />
                 </div>
+
+                <div class="col-12">
+                  <label class="form-label">Motivo</label>
+                   <input type="email" class="form-control" required />
+                </div>
+               
                 <div class="col-12">
                   <label class="form-label">Mensaje</label>
                   <textarea class="form-control" rows="4" required></textarea>
@@ -574,11 +590,11 @@
           <div class="p-4 p-md-5 contact-card h-100">
             <h5 class="fw-bold mb-3">Datos de contacto</h5>
             <ul class="list-unstyled">
-              <li class="mb-2"><i class="bi bi-geo-alt"></i> Av. xx — 7:00 a 21:00</li>
+              <!--li class="mb-2"><i class="bi bi-geo-alt"></i> Av. xx — 7:00 a 21:00</li-->
               <li class="mb-2"><i class="bi bi-telephone"></i> +54 388 412 3456</li>
               <li class="mb-2"><i class="bi bi-envelope"></i> estrellaAndinaSalud@gmail.com</li>
             </ul>
-            <h5 class="fw-bold mb-3">Puntos simulados en San Salvador de Jujuy</h5>
+            <h5 class="fw-bold mb-3">Profesionales de enfermeria en la Provincia</h5>
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
               <div class="map-title"></div>
               <div id="map"></div>
@@ -590,42 +606,42 @@
   </section>
 
 
- <!-- JS de Leaflet -->
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script>
-      // Coordenadas del centro de San Salvador de Jujuy
-      const latBase = -24.1858;
-      const lngBase = -65.2995;
+  <!-- JS de Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Coordenadas del centro de San Salvador de Jujuy
+    const latBase = -24.1858;
+    const lngBase = -65.2995;
 
-      // Crear el mapa centrado en Jujuy
-      const map = L.map('map').setView([latBase, lngBase], 13);
+    // Crear el mapa centrado en Jujuy
+    const map = L.map('map').setView([latBase, lngBase], 13);
 
-      // Cargar los tiles de OpenStreetMap
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
+    // Cargar los tiles de OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-      // Función para generar coordenadas aleatorias cerca del punto base
-      function generarCoordenadasAleatorias(latBase, lngBase, cantidad, rango) {
-        const puntos = [];
-        for (let i = 0; i < cantidad; i++) {
-          const lat = latBase + (Math.random() - 0.5) * rango;
-          const lng = lngBase + (Math.random() - 0.5) * rango;
-          puntos.push([lat, lng]);
-        }
-        return puntos;
+    // Función para generar coordenadas aleatorias cerca del punto base
+    function generarCoordenadasAleatorias(latBase, lngBase, cantidad, rango) {
+      const puntos = [];
+      for (let i = 0; i < cantidad; i++) {
+        const lat = latBase + (Math.random() - 0.5) * rango;
+        const lng = lngBase + (Math.random() - 0.5) * rango;
+        puntos.push([lat, lng]);
       }
+      return puntos;
+    }
 
-      // Generar 30 puntos simulados alrededor de Jujuy
-      const puntosSimulados = generarCoordenadasAleatorias(latBase, lngBase, 30, 0.05);
+    // Generar 30 puntos simulados alrededor de Jujuy
+    const puntosSimulados = generarCoordenadasAleatorias(latBase, lngBase, 30, 0.05);
 
-      // Añadir los puntos al mapa
-      puntosSimulados.forEach(([lat, lng], i) => {
-        L.marker([lat, lng])
-          .addTo(map)
-          .bindPopup(`📍Enfermero Disponible N°${i + 1}<br>`);
-      });
-    </script>
+    // Añadir los puntos al mapa
+    puntosSimulados.forEach(([lat, lng], i) => {
+      L.marker([lat, lng])
+        .addTo(map)
+        .bindPopup(`📍Enfermero Disponible N°${i + 1}<br>`);
+    });
+  </script>
 
 
   <footer class="py-4">
