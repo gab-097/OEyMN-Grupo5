@@ -80,11 +80,19 @@
 
     .section-title {
       font-weight: 800;
-      letter-spacing: .3px;
+      
+      font-family: 'Poppins',Arial, sans-serif;
+      color: #0b132b;
+
     }
 
+
     .section-sub {
-      color: var(--pf-muted)
+      color: #0b132b;
+      font-size: x-large;
+      font-family: 'Poppins',Arial, sans-serif;
+      font-weight: 400;
+      text-align: justify;
     }
 
     .icon-round {
@@ -292,6 +300,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Reseñas</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
           <li class="nav-item ms-lg-2">
             <a class="btn btn-primary" href="tienda.html"><i class="bi bi-bag me-1"></i>Tienda</a>
           </li>
@@ -303,7 +312,7 @@
 
   <section>
     <div class="col-md-10 offset-md-1 ">
-      <h2 class="section-title">
+      <h2 class="custom_heading">
         <br><span>Nuestra Historia</span>
       </h2>
     </div>
@@ -315,12 +324,14 @@
             class="img-fluid rounded mx-auto d-block" alt="">
         </div>
         <div class="col-md-6">
-          <p> 
-            TEXTO POR COMPLETARR
+          <h2 class="section-sub">
             <br>
-            <br>
-            TEXTO POR COMPLETAR 2
-          <p>
+            <p>
+              Un grupo de profesionales de enfermería identificó un problema crítico: miles
+              de personas necesitaban atención domiciliaria de calidad pero no sabían dónde encontrar profesionales
+              confiables.
+            <p>
+          </h2>
         </div>
       </div>
     </div>
@@ -329,11 +340,15 @@
     <div class="row">
       <div class="col-md-7 offset-md-1">
         <h2 class="section-sub">
-          <span>Campo de actividad</span>
+          <br>
+          <br>
+          <p>
+            En 2025, un equipo de emprendedores de salud y tecnología decidió crear una solución: una plataforma que
+            verifica,
+            conecta y gestiona servicios de enfermería con total transparencia.
+          </p>
+
         </h2>
-        <p>
-        ------ POR DEFINIR ------
-        </p>
       </div>
       <div class="col-md-3 text-center">
         <img
@@ -341,15 +356,10 @@
           class="img-fluid  rounded mx-auto d-block" alt="">
       </div>
 
-      
 
-      <div class="col-md-10 offset-md-1 ">
-        <h2 class="custom_heading">
-          <br> <span><!--TITULO---></span>
-        </h2>
-        <p><!--TEXTO---> </p> 
-      </div>
     </div>
+
+
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4 offset-md-1 text-center">
@@ -357,19 +367,21 @@
             class="img-fluid rounded mx-auto d-block" alt="">
         </div>
         <div class="col-md-6">
-          <p> 
-            <!--TEXTO--->
+          <h2 class="section-sub">
             <br>
-            <!--espacio entre textos--->
             <br>
-            <!--TEXTO--->
-          </p>
+            <p>
+              En poco tiempo, logramos crear una comunidad que mejora la calidad de vida de los pacientes y brinda
+              autonomía laboral a los enfermeros.
+            </p>
+
+          </h2>
         </div>
       </div>
     </div>
     <br>
     <br>
-    <br>
+    
     </div>
 
 
@@ -383,7 +395,7 @@
             <small></small>
           </div>
           <div class="col-md-6 d-flex gap-3 justify-content-md-end align-items-start">
-         
+
           </div>
         </div>
       </div>
@@ -399,7 +411,7 @@
       // Año dinámico
       document.getElementById('year').textContent = new Date().getFullYear();
 
-     
+
     </script>
     <!--desplegable-->
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
