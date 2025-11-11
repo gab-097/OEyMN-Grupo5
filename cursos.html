@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      /*color de boton de tienda */
+      --pf-primary: #0ec8e9;
+      /* sky-500 */
+      --pf-dark: #0b132b;
+      --pf-muted: #6c757d;
+      --pf-accent: #22c55e;
+
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+      background: #005ba5;
+      /* mismo fondo que el footer */
+      color: #cdd3df;
+      /* mismo color de texto */
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: #cdd3df !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+      color: #e5f2ff !important;
+      /* igual que los enlaces del footer */
+    }
+
+
+    .btn-primary {
+      background: var(--pf-primary);
+      border-color: var(--pf-primary);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(.95);
+    }
+
+
+    footer {
+      background: #0b132b;
+      color: #cdd3df;
+    }
+
+
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1050;
+      border-radius: 999px;
+      padding: .9rem 1rem;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    }
+
+
+    /*--logo--*/
+    .logo-navbar {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-navbar:hover {
+      transform: scale(1.1);
+    }
+
+    /*--Carts--*/
+    .container__card {
+      max-width: 1200px;
+      margin: auto;
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .__card {
+      width: 300px;
+      margin: 10px;
+      transition: all 300ms;
+    }
+
+    .__card:hover {
+      transform: scale(1.05);
+    }
+
+    .__card .cover {
+      width: 100%;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      /* Estilo de borde opcional */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      /* Sombra opcional */
+    }
+
+    .__card .cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .__card .img__back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /*background: #005ba5;*/
+
+      transform: translateY(100%);
+      transition: all 400ms cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    .__card:hover .img__back {
+      transform: translateY(0%);
+    }
+
+    .__card .description {
+      background: #f0f0f0;
+      padding: 20px;
+      position: relative;
+      top: -60px;
+      z-index: 2;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      /*border-radius: 0 0 10px 10px;*/
+    }
+
+    .__card .description h5 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .__card .description p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    .__card .description .btn-primary {
+      background-color: var(--pf-primary);
+      border: none;
+      padding: 8px 15px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .__card .description .btn-primary:hover {
+      background-color: #0a9bc4;
+      /* Un tono más oscuro */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="images/logo.svg" alt="Estrella Andina Salud" class="logo-navbar">
+        <span>Estrella Andina Salud</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Sobre Nosotros</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="identidad.html">Identidad</a>
+              <a class="dropdown-item" href="filosofia.html">Filosofía</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Reseñas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary" href="tienda.html"><i class="bi bi-bag me-1"></i>Tienda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="py-4">
+    <div class="container__card">
+
+      <div class="__card">
+        <div class="cover">
+          <img src="images/curso1.jpeg" alt="">
+          <div class="img__back"></div>
+        </div>
+        <div class="description">
+          <h5>CURSO BIMODAL: “ACTUALIZACIÓN EN SALUD MENTAL PARA ENFERMERÍA”</h5>
+
+          <p>DIRIGIDO A:
+            👩‍⚕️Personal de Enfermería de los distintos Niveles de atención</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a href="" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+
+      <div class="__card">
+        <div class="cover">
+          <img src="images/curso2.jpeg" alt="">
+          <div class="img__back"></div>
+        </div>
+        <div class="description">
+          <h5>CURSO BIMODAL: “ENFERMERÍA EN EL CUIDADO COMUNITARIO”</h5>
+          <p>DIRIGIDO A:
+            Enfermeros del área de Atención Primaria de la Salud
+            Reemplazantes.
+            Contratados.
+            Planta Permanente.</p>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+          <a href="" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+
+      <div class="__card">
+        <div class="cover">
+          <img src="images/curso3.jpg" alt="">
+          <div class="img__back"></div>
+        </div>
+        <div class="description">
+          <h5>Curso Virtual: Avances en el Manejo de la Analgesia, Sedación y Delirium en el Paciente Crítico</h5>
+          <p>Temas clave:
+
+            Fundamentos de analgesia, sedación y delirium en UTI
+
+            Monitoreo objetivo de analgesia y sedación
+
+            Historia, situación actual y perspectivas de la sedación
+
+            Síndrome post-UCI (PICS)
+
+            Bombas TCI en UTI
+
+            Sedación inhalatoria y su implementación
+
+            Sedación en situaciones especiales
+          </p>
+          <a href="" class="btn btn-primary">Ver mas</a>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    </div>
+
+
+  </section>
+
+  <footer class="py-4">
+    <div class="container">
+      <h5 class="fw-bold">Estrella Andina</h5>
+      <p class="mb-1">© <span id="year"></span> Estrella Andina - Salud</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/543884123456" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Año dinámico
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>

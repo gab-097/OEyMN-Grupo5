@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filosofia</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      /*color de boton de tienda */
+      --pf-primary: #0ec8e9;
+      /* sky-500 */
+      --pf-dark: #0b132b;
+      --pf-muted: #6c757d;
+      --pf-accent: #22c55e;
+
+    }
+
+    .navbar {
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+      /*background: #0b132b*/
+      ;
+      background: #005ba5;
+      /* mismo fondo que el footer */
+      color: #cdd3df;
+      /* mismo color de texto */
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    }
+
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+      color: #cdd3df !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+      color: #e5f2ff !important;
+      /* igual que los enlaces del footer */
+    }
+
+    .btn-sec {
+      background: var(--pf-muted);
+      border-color: var(--pf-dark);
+    }
+
+    .btn-primary {
+      background: var(--pf-primary);
+      border-color: var(--pf-primary);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(.95);
+    }
+
+    .btn-outline-light:hover {
+      color: #111
+    }
+
+    .hero {
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .45), rgba(0, 0, 0, .25) 60%, rgba(0, 0, 0, .55));
+    }
+
+    .hero .carousel-caption {
+      bottom: 18%;
+    }
+
+    .section-title {
+      font-weight: 800;
+
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #0b132b;
+
+    }
+
+
+    .section-sub {
+      color: #0b132b;
+      font-size: x-large;
+      font-family: 'Poppins', Arial, sans-serif;
+      font-weight: 400;
+      text-align: justify;
+    }
+
+    .icon-round {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #e7f6fe;
+      color: var(--pf-primary);
+    }
+
+    .feature-card {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    .gallery img {
+      border-radius: 16px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .testimonial {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    .contact-card {
+      border: 1px solid rgba(0, 0, 0, .06);
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .06);
+    }
+
+    footer {
+      background: #0b132b;
+      color: #cdd3df;
+    }
+
+    footer a {
+      color: #e5f2ff;
+      text-decoration: none
+    }
+
+    .whatsapp-fab {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1050;
+      border-radius: 999px;
+      padding: .9rem 1rem;
+      background: #25d366;
+      color: #fff;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .25);
+    }
+
+    .badge-soft {
+      background: #eef9f2;
+      color: #1e8e3e;
+      border: 1px solid #ccebd8
+    }
+
+    /*style para app*/
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* --- HERO --- */
+
+    .hero2 {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 10%;
+      background: linear-gradient(360deg, #f9f9f9, #005ba5);
+      color: #fff9f9;
+      flex-wrap: wrap;
+    }
+
+    .hero2 .container2 {
+      max-width: 500px;
+    }
+
+    .hero2 h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero2 h1 span {
+      color: #0e0c04;
+    }
+
+    .hero2 p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-googleplay img {
+      width: 180px;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-googleplay img:hover {
+      transform: scale(1.05);
+    }
+
+    .image-container img {
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --- FEATURES --- */
+    .features {
+      text-align: center;
+      padding: 4rem 10%;
+      background: #fff;
+    }
+
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: #f0f4f8;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .hero2 {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .image-container img {
+        width: 220px;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /*--logo--*/
+    .logo-navbar {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo-navbar:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="images/logo.svg" alt="Estrella Andina Salud" class="logo-navbar">
+        <span>Estrella Andina Salud</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Sobre Nosotros</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="identidad.html">Identidad</a>
+              <a class="dropdown-item" href="filosofia.html">Filosofía</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#servicios">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#testimonios">Reseñas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-primary" href="tienda.html"><i class="bi bi-bag me-1"></i>Tienda</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <section>
+ <br>
+
+    <div class="row">
+      <div class="col-md-7 offset-md-1">
+        <h2 class="section-sub">
+          <br>
+          <p>
+            Somos un puente de confianza entre pacientes y enfermeros.
+            Creemos que la salud debe ser accesible, rápida y
+            humana.
+          </p>
+          
+        </h2>
+      </div>
+      
+      <div class="col-md-3 text-center">
+        <img src="images/filosofia.jpg" class="img-fluid  rounded mx-auto d-block" alt="">
+      </div>
+    </div>
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3 text-center offset-md-1">
+          <img src="images/vision.jpg" class="img-fluid rounded mx-auto d-block" alt="">
+        </div>
+        <div class="col-md-7 ">
+          <h2 class="section-sub">
+            
+            <p>
+              Ser la plataforma líder en atención de enfermería domiciliaria en Latinoamérica, conectando a 1 millón de
+              pacientes en 5 años.
+            <p>
+          </h2>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="row">
+      <div class="col-md-7 offset-md-1">
+        <h2 class="section-sub">
+          <br>
+          
+          <p>
+            Facilitar el acceso a cuidados de enfermería profesionales, seguros y flexibles, mejorando la calidad de
+            vida de pacientes y generando oportunidades laborales dignas para los enfermeros.
+          </p>
+
+        </h2>
+      </div>
+      <div class="col-md-3 text-center">
+        <img src="images/mision.jpg" class="img-fluid  rounded mx-auto d-block" alt="">
+      </div>
+    </div>
+    <br>
+    <br>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <h5 class="fw-bold">Estrella Andina</h5>
+            <p class="mb-1">© <span id="year"></span> Estrella Andina - Salud</p>
+            <small></small>
+          </div>
+          <div class="col-md-6 d-flex gap-3 justify-content-md-end align-items-start">
+
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a class="whatsapp-fab" href="https://wa.me/543884123456" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Año dinámico
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    </script>
+    <!--desplegable-->
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>
